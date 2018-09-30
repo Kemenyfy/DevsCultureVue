@@ -1,0 +1,14 @@
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/bin/Debug/netcoreapp2.1/Server.deps.json
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/bin/Debug/netcoreapp2.1/Server.runtimeconfig.json
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/bin/Debug/netcoreapp2.1/Server.runtimeconfig.dev.json
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/bin/Debug/netcoreapp2.1/Server.dll
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/bin/Debug/netcoreapp2.1/Server.pdb
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/obj/Debug/netcoreapp2.1/Server.csprojAssemblyReference.cache
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/obj/Debug/netcoreapp2.1/Server.csproj.CoreCompileInputs.cache
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/obj/Debug/netcoreapp2.1/Server.RazorAssemblyInfo.cache
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/obj/Debug/netcoreapp2.1/Server.RazorAssemblyInfo.cs
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/obj/Debug/netcoreapp2.1/Server.AssemblyInfoInputs.cache
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/obj/Debug/netcoreapp2.1/Server.AssemblyInfo.cs
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/obj/Debug/netcoreapp2.1/Server.RazorTargetAssemblyInfo.cache
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/obj/Debug/netcoreapp2.1/Server.dll
+/Users/Kemenyfy/sdg/cool-projects/vue/DevsCultureVue/Server/obj/Debug/netcoreapp2.1/Server.pdb
