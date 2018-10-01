@@ -75,7 +75,6 @@ export default {
 </script>
 
 <style scoped>
-
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -183,4 +182,11 @@ export default {
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+
+  .list li {
+    width: 100%;
+    height: 40%;
+  }
+}
 </style>

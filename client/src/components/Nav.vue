@@ -4,75 +4,36 @@
       <div class="sidebar-header">
         <img src="../assets/logo.png" class="logo"> 
       </div>
-
       <ul class="list-unstyled components">
-        <li>
-          <router-link to="/">Home</router-link> 
-        </li>
-        <li>
-          <router-link to="/about">About</router-link>
-        </li>
+        <li><router-link to="/">Home</router-link> </li>
+        <li><router-link to="/about">About</router-link></li>
         <li>
           <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
           <ul class="collapse list-unstyled" id="pageSubmenu">
-            <li>
-              <a href="#">Programming Languages</a>
-            </li>
-            <li>
-              <a href="#">Front-End Techs</a>
-            </li>
-            <li>
-              <a href="#">Back-End Techs</a>
-            </li>
-            <li>
-              <a href="#">Books</a>
-            </li>
-            <li>
-              <a href="#">Design</a>
-            </li>
-            <li>
-              <a href="#">Browsers</a>
-            </li>
-            <li>
-              <a href="#">Hosting</a>
-            </li>
-            <li>
-              <a href="#">Schools</a>
-            </li>
-            <li>
-              <a href="#">News</a>
-            </li>
-            <li>
-              <a href="#">Podcasts</a>
-            </li>
-            <li>
-              <a href="#">Collaboration</a>
-            </li>
-            <li>
-              <a href="#">Meetups</a>
-            </li>
+            <li><a href="#">Programming Languages</a></li>
+            <li><a href="#">Front-End Techs</a></li>
+            <li><a href="#">Back-End Techs</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Browsers</a></li>
+            <li><a href="#">Hosting</a></li>
+            <li><a href="#">Schools</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Podcasts</a></li>
+            <li><a href="#">Collaboration</a></li>
+            <li><a href="#">Meetups</a></li>
           </ul>
         </li>
-        <li>
-          <a href="#">Blogs</a>
-        </li>
-        <li>
-          <a href="#">Contact Us</a>
-        </li>
-        <li>
-          <a href="#">Sponsors</a>
-        </li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Sponsors</a></li>
       </ul>
-
     </nav>
-
-    <div>
+    <!-- <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-        </div>
+        <div class="container-fluid"></div>
       </nav>
-    </div>
-    
+    </div> -->
   </div>
 </template>
 

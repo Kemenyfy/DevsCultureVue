@@ -8,9 +8,9 @@
         </div>
     </div>
   </div>
-<!-- <img alt="Vue logo" src="../assets/logo.png"> -->
 </template>
 
+<!-- <img alt="Vue logo" src="../assets/logo.png"> -->
 <script>
 // @ is an alias to /src
 import Nav from "@/components/Nav.vue";

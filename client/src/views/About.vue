@@ -11,3 +11,15 @@
   </div>
  
 </template>
+
+<script>
+import Nav from "@/components/Nav.vue";
+import TopBar from "@/components/TopBar.vue";
+
+export default {
+  components: {
+    Nav,
+    TopBar
+  }
+};
+</script>

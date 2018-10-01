@@ -22,7 +22,6 @@ We will write here our step by step process to build the website.
         - [x] Basic Sidebar
         - [ ] SideBar Animation
         - [ ] Responsiveness
-        - [ ] Add Search Bar
         - [ ] Add Add Form Link
         - [ ] Link SideBar Items
 
@@ -66,12 +65,15 @@ We will write here our step by step process to build the website.
         - [ ] SubCategories (ID, Name, Brief Description, URL, Image Link, Category ID)
         - [ ] Resources (ID, Name, Brief Description, Detailed Description, URL, Image Link, Subcategories ID)
 
-
+    - [ ] Add Endpoints to Be Able to Fetch Categories
+    - [ ] Add Endpoints to Be Able to Fetch Subcategories
+    - [ ] Add Endpoints to Be Able to Fetch Resources
     - [ ] Connect Back-End and Front-End
 
 
 ### Future
 
+- [ ] Add Search Bar Functionality
 - [ ] Add Splitting SCSS to Category Images
 - [ ] Add a ParentID to the Subcategories Table for Nested Subcategories.
 - [ ] Add function to Apply Local Storage to Favorite Resources.
