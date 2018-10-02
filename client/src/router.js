@@ -29,7 +29,7 @@ export default new Router({
       component: AddForm
     },
     {
-      path: '/subcategories',
+      path: '/subcategories/:categoryId',
       name: 'subcategores',
       component: Subcategories
     },
