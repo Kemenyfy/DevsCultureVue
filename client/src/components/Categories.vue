@@ -1,13 +1,13 @@
 <template>
   <div class="categoriesContainer">
     <ul class="list">
-            <li v-for="cat in categoriesData" :key="cat.id">
+            <li v-for="cat in categoriesData" :key="cat.id" v-bind:style="{ 'background': `url(${cat.imageURL})` }" >
                 <p class="text">{{cat.name}}</p>
             </li>
         </ul>
   </div>
 </template>
-// :style={{backgroundImage:cat.imageUrl}}
+
 <script>
 export default {
   name: "Categories",
@@ -53,8 +53,8 @@ p {
   min-width: 25%;
 }
 
-.list li:nth-child(1) {
-  background: url(../assets/ProgrammingLanguages.jpg);
+.list li:nth-child() {
+  /* background: url({{../assets/ProgrammingLanguages.jpg}}); */
   background-size: cover;
   background-position: left;
 }
