@@ -33,6 +33,7 @@ export default {
     border-color: #29B7BD;
     border-radius: 0.25rem;
     box-shadow: 0 5px 0 #1A91AA;
+    outline: none;
 }
 
 .button:hover {

@@ -1,80 +1,40 @@
 <template>
   <div class="categoriesContainer">
     <ul class="list">
-            <li>
-              <div class="text">
-                <p>Programming Languages</p>
-              </div>
-            </li>
-            <li>
-              <div class="text">
-                <p>Front-End Techs</p>
-              </div>
-            </li>
-            <li>
-              <div class="text">
-                <p>Back-End Techs</p>
-              </div>
-            </li>
-            <li>
-              <div class="text">
-                <p>Books</p>
-              </div>
-            </li>
-            <li>
-              <div class="text">
-                <p>Design</p>
-              </div>
-            </li>
-            <li>
-              <div class="text">
-                <p>Browsers</p>
-              </div>
-            </li>
-            <li>
-              <div class="text">
-                <p>Hosting</p>  
-              </div>
-            </li>
-            <li>
-              <div class="text">
-                <p>Coding Classes</p>
-              </div>
-            </li>
-            <li>
-              <div class="text">
-                <p>News</p>
-              </div>
-            </li>
-            <li>
-              <div class="text">
-                <p>Podcasts</p>
-              </div>
-            </li>
-            <li>
-              <div class="text">
-                <p>Collaboration</p>
-              </div>
-            </li>
-            <li>
-              <div class="text">
-                <p>Meetups</p>
-              </div>
+            <li v-for="cat in categoriesData" :key="cat.id">
+                <p class="text">{{cat.name}}</p>
             </li>
         </ul>
   </div>
 </template>
-
+// :style={{backgroundImage:cat.imageUrl}}
 <script>
 export default {
   name: "Categories",
-  props: {
-    msg: String
+  data: function() {
+    return {
+      categoriesData: []
+    };
+  },
+  mounted: function() {
+    fetch("https://localhost:5001/api/category")
+      .then(resp => resp.json())
+      .then(data => {
+          console.log(data)
+        this.categoriesData = data;
+      });
   }
 };
 </script>
 
 <style scoped>
+
+p {
+  height: 3em;
+  margin: 0;
+  padding: 10px 10px;
+}
+
 .list {
   display: flex;
   flex-wrap: wrap;

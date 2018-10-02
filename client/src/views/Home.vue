@@ -22,7 +22,7 @@ export default {
   components: {
     Nav,
     TopBar,
-    Categories
+    Categories,
   }
 };
 

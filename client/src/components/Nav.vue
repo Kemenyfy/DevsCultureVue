@@ -10,7 +10,7 @@
         <li>
           <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
           <ul class="collapse list-unstyled" id="pageSubmenu">
-            <li><a href="#">Programming Languages</a></li>
+            <li><router-link to="/subcategories">Programming Languages</router-link></li>
             <li><a href="#">Front-End Techs</a></li>
             <li><a href="#">Back-End Techs</a></li>
             <li><a href="#">Books</a></li>
@@ -113,6 +113,7 @@ a:focus {
   font-size: 1.1em;
   display: block;
 }
+
 #sidebar ul li a:hover {
   color: #7386d5;
   background: #fff;

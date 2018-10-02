@@ -26,11 +26,12 @@ namespace Server
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services
                 .AddEntityFrameworkNpgsql()
-                .AddDbContext<DevsCultureDBContext>(opt => 
+                .AddDbContext<DevsCultureDBContext>(opt =>
                     opt.UseNpgsql("server=localhost; Database=DevsCultureDB"));
-                    
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
         }
@@ -47,6 +48,12 @@ namespace Server
                 app.UseHsts();
             }
 
+            app.UseCors(builder =>
+               builder
+               .AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader()
+               .AllowCredentials());
             app.UseHttpsRedirection();
             app.UseMvc();
         }
