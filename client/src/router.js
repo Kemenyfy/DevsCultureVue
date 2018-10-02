@@ -30,7 +30,7 @@ export default new Router({
     },
     {
       path: '/subcategories/:categoryId',
-      name: 'subcategores',
+      name: 'subcategories',
       component: Subcategories
     },
   ]
