@@ -10,18 +10,18 @@
         <li>
           <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
           <ul class="collapse list-unstyled" id="pageSubmenu">
-            <li><router-link to="/subcategories">Programming Languages</router-link></li>
-            <li><a href="#">Front-End Techs</a></li>
-            <li><a href="#">Back-End Techs</a></li>
-            <li><a href="#">Books</a></li>
-            <li><a href="#">Design</a></li>
-            <li><a href="#">Browsers</a></li>
-            <li><a href="#">Hosting</a></li>
-            <li><a href="#">Schools</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Podcasts</a></li>
-            <li><a href="#">Collaboration</a></li>
-            <li><a href="#">Meetups</a></li>
+            <li><router-link to="/subcategories/1">Programming Languages</router-link></li>
+            <li><router-link to="/subcategories/2">Front-End Techs</router-link></li>
+            <li><router-link to="/subcategories/3">Back-End Techs</router-link></li>
+            <li><router-link to="/subcategories/4">Design</router-link></li>
+            <li><router-link to="/subcategories/5">Hosting</router-link></li>
+            <li><router-link to="/subcategories/6">Browsers</router-link></li>
+            <li><router-link to="/subcategories/7">Collaboration</router-link></li>
+            <li><router-link to="/subcategories/8">News</router-link></li>
+            <li><router-link to="/subcategories/9">Coding Schools</router-link></li>
+            <li><router-link to="/subcategories/10">Books</router-link></li>
+            <li><router-link to="/subcategories/11">Podcasts</router-link></li>
+            <li><router-link to="/subcategories/12">Meetups</router-link></li>
           </ul>
         </li>
         <li><a href="#">Blogs</a></li>

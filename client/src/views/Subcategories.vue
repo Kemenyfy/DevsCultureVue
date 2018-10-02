@@ -2,13 +2,17 @@
   <div class="wrapper">
     <Nav /> <!-- Sidebar -->
     <div class="pageContent"> <!-- Page Content -->
-        <TopBar />
-        <div class="mainBody">
-            <h1>This is a Subcategories page</h1>
+      <TopBar />
+      <section class="row p-4 m-0">         
+        <div class="card">
+          <img class="card-img-top" alt="Subcategory Image">
+          <div class="card-body">
+          <!-- <h4 class="card-title">{{ movie.title }}</h4> -->
+          <!-- <p class="card-text">Released Date: {{ movie.release_date }}</p> -->
+          <a href="#!" class="btn btn-primary">Subcategory Details</a>
+          </div>
         </div>
-        <div v-for="sub in subcategoriesData" :key="sub.id">
-            {{sub.name}}
-        </div>
+      </section>
     </div>
   </div>
 </template>
