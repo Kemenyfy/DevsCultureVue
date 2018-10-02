@@ -34,10 +34,10 @@ export default {
     };
   },
   mounted: function() {
-    fetch("https://localhost:5001/api/subcategory")
+    console.log(this.$route.params.categoryId)
+    fetch(`https://localhost:5001/api/subcategory/${this.$route.params.categoryId}`)
       .then(resp => resp.json())
       .then(data => {
-          console.log(data)
         this.subcategoriesData = data;
       });
   }

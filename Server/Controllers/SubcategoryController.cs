@@ -27,5 +27,14 @@ namespace Server.Controllers
             var subcategories = this.db.SubcategoryTable;
             return subcategories;
         }
+
+        // GET api/subcategory/id
+        [HttpGet("{Id}")]
+        public IEnumerable<Subcategory> Get(int Id)
+        {
+            // Query Database Table Questions --> Return Ordered by Title and then by Date
+            var subcategories = this.db.SubcategoryTable.Where(w => w.Id == Id);
+            return subcategories;
+        }
     }
 }
