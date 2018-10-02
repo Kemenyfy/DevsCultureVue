@@ -79,18 +79,18 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 60vh;
-  margin: 2em;
+  height: 83vh;
   padding: 0;
 }
 
 .list li {
   list-style: none;
   position: relative;
-  width: 30%;
-  height: 30%;
+  width: 28%;
+  height: 23%;
   text-align: center;
   margin: 10px;
+  min-width: 25%;
 }
 
 .list li:nth-child(1) {
@@ -124,7 +124,7 @@ export default {
 }
 
 .list li:nth-child(6) {
-  background: url(../assets/Browsers.png);
+  background: url(../assets/Browsers.jpg);
   background-size: cover;
   background-position: left;
 }
@@ -142,13 +142,13 @@ export default {
 }
 
 .list li:nth-child(9) {
-  background: url(../assets/News.jpeg);
+  background: url(../assets/News.jpg);
   background-size: cover;
   background-position: left;
 }
 
 .list li:nth-child(10) {
-  background: url(../assets/Podcasts.jpeg);
+  background: url(../assets/Podcasts.jpg);
   background-size: cover;
   background-position: left;
 }
@@ -160,7 +160,7 @@ export default {
 }
 
 .list li:nth-child(12) {
-  background: url(../assets/Meetups.png);
+  background: url(../assets/Meetups.jpg);
   background-size: cover;
   background-position: left;
 }
@@ -182,11 +182,41 @@ export default {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+
+  .list {
+    margin: 0;
+  }
 
   .list li {
-    width: 100%;
+    width: 40%;
+    height: 15%;
+    margin: 10px;
+  }
+
+  .list li .text {
+    transition: 0.5s;
+    transition-delay: 0.2s;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .list {
+    margin: 0;
+  }
+
+  .list li {
+    width: 77%;
     height: 40%;
+    margin: 20px;
+  }
+
+  .list li .text {
+    transition: 0.5s;
+    transition-delay: 0.2s;
+    opacity: 1;
   }
 }
 </style>
