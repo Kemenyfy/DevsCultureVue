@@ -4,7 +4,7 @@
             <i class="fas fa-align-left"></i>
             <span></span>
         </button>
-        <button class="addForm">Add a Resource</button>
+        <router-link class="addForm" to="/addForm">Add a Resource</router-link>
     </div>
 </template>
 
@@ -31,12 +31,26 @@ export default {
 }
 
 .addForm {
+    position: relative;
     margin: 1em 6% 1em 1em;
     color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
     background-color: #f73f11;
     font-weight: bold;
     border-color: #f73f11;
     border-radius: 0.25rem;
+    box-shadow: 0 5px 0 darkred;
+}
+
+.addForm:hover {
+    opacity: .8;
+}
+
+.addForm:active {
+  box-shadow: none;
+  top: 5px;
 }
 
 </style>

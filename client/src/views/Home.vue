@@ -14,8 +14,8 @@
 <script>
 // @ is an alias to /src
 import Nav from "@/components/Nav.vue";
-import Categories from "@/components/Categories.vue"
 import TopBar from "@/components/TopBar.vue"
+import Categories from "@/components/Categories.vue"
 
 export default {
   name: "app",
@@ -37,8 +37,6 @@ $(document).ready(function() {
 
 <style>
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-/* @import "./css/custom.css";
-@import "./css/mediaqueries.css"; */
 
 html {
   width: 100%;
