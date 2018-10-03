@@ -5,6 +5,7 @@
         <TopBar />
         <div class="mainBody">
             <h1>This is the resources page</h1>
+            
         </div>
     </div>
   </div>

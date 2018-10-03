@@ -14,10 +14,10 @@
             <h2>{{sub.name}}<small>Made by Somebody/Somehow/Maybe</small></h2>
           </div>
           <div class="card-flap flap1">
-            <div class="card-description" v-on:click="toggleDescription">{{sub.briefDescription}}</div>
-            <div class="card-flap flap2" v-on:click="toggleDescription" >
-              <div class="card-actions" v-on:click="toggleDescription">
-                <a href="#" class="btn" v-on:click="toggleDescription">Find Resources</a>
+            <div class="card-description">{{sub.briefDescription}}</div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a class="btn"><router-link to="./resources/1">Find Resources</router-link></a>
               </div>
             </div>
           </div>
