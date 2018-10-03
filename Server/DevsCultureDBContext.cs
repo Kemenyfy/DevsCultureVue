@@ -30,5 +30,6 @@ namespace Server
 
         public DbSet<Category> CategoryTable { get; set; }
         public DbSet<Subcategory> SubcategoryTable { get; set; }
+        public DbSet<Resources> ResourcesTable { get; set; }
     }
 }
