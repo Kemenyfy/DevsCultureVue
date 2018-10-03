@@ -13,11 +13,11 @@
             </a>
             <h2>{{sub.name}}<small>Made by Somebody/Somehow/Maybe</small></h2>
           </div>
-          <div class="card-flap flap1">
-            <div class="card-description">{{sub.briefDescription}}</div>
-            <div class="card-flap flap2">
-              <div class="card-actions">
-                <a href="#" class="btn">Find Resources</a>
+          <div class="card-flap flap1" v-on:click="toggleDescription">
+            <div class="card-description" v-on:click="toggleDescription">{{sub.briefDescription}}</div>
+            <div class="card-flap flap2" v-on:click="toggleDescription" >
+              <div class="card-actions" v-on:click="toggleDescription">
+                <a href="#" class="btn" v-on:click="toggleDescription">Find Resources</a>
               </div>
             </div>
           </div>
@@ -45,60 +45,63 @@ export default {
   },
   mounted: function() {
     console.log(this.$route.params.categoryId);
-    fetch(
-      `https://localhost:5001/api/subcategory/${this.$route.params.categoryId}`
-    )
+    fetch(`https://localhost:5001/api/subcategory/${this.$route.params.categoryId}`)
       .then(resp => resp.json())
       .then(data => {
         console.log(data);
         this.subcategoriesData = data;
-      });
-  }
-};
-$(document).ready(function(){
-  var zindex = 10;
-  
-  $("div.card").click(function(e){
-    e.preventDefault();
-
-    var isShowing = false;
-
-    if ($(this).hasClass("show")) {
-      isShowing = true
-    }
-
-    if ($("div.cards").hasClass("showing")) {
-      // a card is already in view
-      $("div.card.show")
-        .removeClass("show");
-
-      if (isShowing) {
-        // this card was showing - reset the grid
-        $("div.cards")
-          .removeClass("showing");
-      } else {
-        // this card isn't showing - get in with it
-        $(this)
-          .css({zIndex: zindex})
-          .addClass("show");
-
+        setTimeout(this.toggleDescription, 0);
+      })
+  },
+  methods: {
+      toggleDescription: function() {
+        $(document).ready(function(){
+          var zindex = 10;
+          
+          $("div.card").click(function(e){
+            e.preventDefault();
+        
+            var isShowing = false;
+        
+            if ($(this).hasClass("show")) {
+              isShowing = true
+            }
+        
+            if ($("div.cards").hasClass("showing")) {
+              // a card is already in view
+              $("div.card.show")
+                .removeClass("show");
+        
+              if (isShowing) {
+                // this card was showing - reset the grid
+                $("div.cards")
+                  .removeClass("showing");
+              } else {
+                // this card isn't showing - get in with it
+                $(this)
+                  .css({zIndex: zindex})
+                  .addClass("show");
+        
+              }
+        
+              zindex++;
+        
+            } else {
+              // no cards in view
+              $("div.cards")
+                .addClass("showing");
+              $(this)
+                .css({zIndex:zindex})
+                .addClass("show");
+        
+              zindex++;
+            }
+            
+          });
+        });
       }
-
-      zindex++;
-
-    } else {
-      // no cards in view
-      $("div.cards")
-        .addClass("showing");
-      $(this)
-        .css({zIndex:zindex})
-        .addClass("show");
-
-      zindex++;
-    }
-    
-  });
-});
+  }    
+}
 </script>
 
 <style lang="scss" scoped>
@@ -140,12 +143,12 @@ a.btn:active {
 
 .cards {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 div.cards {
-  margin: 80px auto;
+  margin: 2%;
   max-width: 960px;
   text-align: center;
 }
@@ -153,8 +156,8 @@ div.cards {
 div.card {
   background: #ffffff;
   display: inline-block;
-  margin: 8px;
-  max-width: 300px;
+  margin: 2%;
+  max-width: 15em;
   perspective: 1000;
   position: relative;
   text-align: left;
@@ -164,7 +167,7 @@ div.card {
   border-radius: 0;
 
   img {
-    max-width: 300px;
+    max-width: 100%;
   }
 
   div.card-title {
@@ -234,7 +237,7 @@ div.card {
     position: absolute;
     width: 100%;
     transform-origin: top;
-    transform: rotateX(-82.5deg);
+    transform: rotateX(-83.5deg);
   }
 
   div.flap1 {

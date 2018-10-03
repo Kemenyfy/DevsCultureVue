@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
-    <Nav /> <!-- Sidebar -->
-    <div class="pageContent"> <!-- Page Content -->
+    <Nav />
+    <div class="pageContent">
         <div class="mainBody">
             <TopBar />
             <Categories />
@@ -10,9 +10,7 @@
   </div>
 </template>
 
-<!-- <img alt="Vue logo" src="../assets/logo.png"> -->
 <script>
-// @ is an alias to /src
 import Nav from "@/components/Nav.vue";
 import TopBar from "@/components/TopBar.vue"
 import Categories from "@/components/Categories.vue"
@@ -25,14 +23,6 @@ export default {
     Categories,
   }
 };
-
-$(document).ready(function() {
-  $("#sidebarCollapse").on("click", function() {
-    $("#sidebar").toggleClass("active");
-    $(this).toggleClass("active");
-  });
-});
-
 </script>
 
 <style>

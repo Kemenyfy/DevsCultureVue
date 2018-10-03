@@ -3,7 +3,7 @@
     <ul class="list">
       <li v-for="cat in categoriesData" :key="cat.id" v-bind:style="{ 'background': `url(${cat.imageURL})`, 'background-size': `cover`, 'background-position': `left` }" >
         <router-link :to="{name:'subcategories', params:{categoryId:cat.id}}">  
-        <p class="text">{{cat.name}}</p>
+         <p class="text">{{cat.name}}</p>
         </router-link>
       </li>
     </ul>
@@ -24,7 +24,7 @@ export default {
       .then(data => {
         console.log(data);
         this.categoriesData = data;
-      });
+      })
   }
 };
 </script>
