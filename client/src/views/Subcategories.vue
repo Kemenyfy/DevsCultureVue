@@ -7,7 +7,7 @@
         <div class="card" v-for="sub in subcategoriesData" :key="sub.id">
           <img class="card-img-top" :src="`${sub.imageURL}`" alt="Subcategory Image">
           <div class="card-body">
-          <a href="#!" class="btn btn-primary">{{sub.name}}</a>
+          <p href="#!" class="title">{{sub.name}}</p>
           </div>
         </div>
       </section>
@@ -53,7 +53,9 @@ export default {
     align-items: center;
 }
 .row {
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card-img-top {
@@ -61,9 +63,18 @@ export default {
   padding: 10px;
 }
 
-.btn {
-  font-size: 1.5em;
-  background-color: black;
+.title {
+  font-size: 1.2em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
 }
+
+
 
 </style>
