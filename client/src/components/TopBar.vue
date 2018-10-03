@@ -1,6 +1,6 @@
 <template>
     <div class="topButtons">
-        <button type="button" id="sidebarCollapse" class="button" v-on:click="toggleMenu"><i class="fas fa-align-left"></i></button>
+        <button type="button" id="sidebarCollapse" class="button"><i class="fas fa-align-left"></i></button>
         <router-link class="addForm" to="/addForm">Add a Resource</router-link>
     </div>
 </template>
@@ -12,16 +12,10 @@ export default {
     msg: String
   },
   mounted: function() {
-    this.toggleMenu();
     $("#sidebarCollapse").on("click", function() {
       $("#sidebar").toggleClass("active");
       $(this).toggleClass("active");
     });
-  },
-  methods: {
-    toggleMenu: function() {
-      console.log("clicks");
-    }
   }
 };
 </script>

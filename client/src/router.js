@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import AddForm from './views/AddForm.vue'
 import Subcategories from './views/Subcategories'
+import Resources from './views/Resources'
 
 Vue.use(Router)
 
@@ -32,6 +33,11 @@ export default new Router({
       path: '/subcategories/:categoryId',
       name: 'subcategories',
       component: Subcategories
+    },
+    {
+      path: '/resources/:subcategoryId',
+      name: 'resources',
+      component: Resources
     },
   ]
 })

@@ -13,7 +13,7 @@
             </a>
             <h2>{{sub.name}}<small>Made by Somebody/Somehow/Maybe</small></h2>
           </div>
-          <div class="card-flap flap1" v-on:click="toggleDescription">
+          <div class="card-flap flap1">
             <div class="card-description" v-on:click="toggleDescription">{{sub.briefDescription}}</div>
             <div class="card-flap flap2" v-on:click="toggleDescription" >
               <div class="card-actions" v-on:click="toggleDescription">
@@ -149,14 +149,13 @@ a.btn:active {
 
 div.cards {
   margin: 2%;
-  max-width: 960px;
   text-align: center;
 }
 
 div.card {
   background: #ffffff;
   display: inline-block;
-  margin: 2%;
+  margin: 1em;
   max-width: 15em;
   perspective: 1000;
   position: relative;
