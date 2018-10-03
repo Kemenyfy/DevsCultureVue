@@ -28,12 +28,12 @@ namespace Server.Controllers
             return subcategories;
         }
 
-        // GET api/subcategory/id
+        // GET api/subcategory/categoryId
         [HttpGet("{Id}")]
         public IEnumerable<Subcategory> Get(int Id)
         {
             // Query Database Table Questions --> Return Ordered by Title and then by Date
-            var subcategories = this.db.SubcategoryTable.Where(w => w.Id == Id);
+            var subcategories = this.db.SubcategoryTable.Where(w => w.CategoryId == Id);
             return subcategories;
         }
     }
