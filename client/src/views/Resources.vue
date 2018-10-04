@@ -3,12 +3,12 @@
     <Nav /> <!-- Sidebar -->
     <div class="pageContent"> <!-- Page Content -->
         <TopBar />
-        <div class="mainBody" v-for="res in resourcesData" :key="res.id">
+        <div class="mainBody">
           <div class="header">
             <h1 class="header__title">Resources Page</h1>
             <h2 class="header__subtitle">by/for Devs</h2>
           </div>
-          <div class="cards">
+          <div class="cards" v-for="res in resourcesData" :key="res.id">
             <div class=" card [ is-collapsed ] ">
               <div class="card__inner [ js-expander ]">
                 <span>{{res.name}}</span>
@@ -42,7 +42,7 @@ export default {
   },
   mounted: function() {
     console.log(this.$route.params.subcategoryId);
-    fetch(`https://localhost:5001/api/subcategory/resource/`)
+    fetch(`https://localhost:5001/api/subcategory/resource/${this.$route.params.subcategoryId}`)
       .then(resp => resp.json())
       .then(data => {
         console.log(data);
