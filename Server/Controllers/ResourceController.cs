@@ -36,5 +36,19 @@ namespace Server.Controllers
             var resources = this.db.ResourcesTable.Where(w => w.SubcategoryId == Id);
             return resources;
         }
+
+        // POST api/subcategory/resource
+        [HttpPost]
+        public ActionResult<Resources> Post([FromBody] Resources Resource)
+        {
+        
+            var db = new DevsCultureDBContext();
+
+            db.ResourcesTable.Add(Resource);
+            db.SaveChanges();
+            return Ok(Resource);
+
+        // In Postman Use --> https://localhost:5001/api/animal/ --> Add Animal Name in Quotes in Body
+        }
     }
 }
