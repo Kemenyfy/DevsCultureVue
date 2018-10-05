@@ -26,14 +26,14 @@ We will write here our step by step process to build the website.
         - [ ] Link SideBar Items
 
 
-    - [ ] Home Page Body (Category Page)
-        - [ ] Toggle SideBar On/Off 
-        - [ ] Log In Placeholder
-        - [ ] Basic Images Placeholder
-        - [ ] Flex-Wrap Images
-        - [ ] Make Home Page Responsive
+    - [X] Home Page Body (Category Page)
+        - [X] Toggle SideBar On/Off 
+        - [X] Log In Placeholder
+        - [X] Basic Images Placeholder
+        - [X] Flex-Wrap Images
+        - [X] Make Home Page Responsive
         - [ ] Add Splitting SCSS to Basic Images
-        - [ ] Link Basic Images
+        - [X] Link Basic Images
 
 
     - [ ] Subcategories Page
