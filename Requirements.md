@@ -36,12 +36,12 @@ We will write here our step by step process to build the website.
         - [X] Link Basic Images
 
 
-    - [ ] Subcategories Page
-        - [ ] Basic Images Placeholder
-        - [ ] Flex-Wrap Images
-        - [ ] Make Home Page Responsive
-        - [ ] Add Animation to Images
-        - [ ] Link Images
+    - [X] Subcategories Page
+        - [X] Basic Images Placeholder
+        - [X] Flex-Wrap Images
+        - [X] Make Page Responsive
+        - [X] Add Animation to Images
+        - [X] Link Images
 
 
     - [ ] Extra Pages
