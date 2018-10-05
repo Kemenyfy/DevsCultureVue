@@ -57,18 +57,18 @@ We will write here our step by step process to build the website.
 ## Back-End
 
 
-* [ ] Database
+* [X] Database
 
 
-    - [ ] Create Tables
-        - [ ] Categories (ID, Name)
-        - [ ] SubCategories (ID, Name, Brief Description, URL, Image Link, Category ID)
-        - [ ] Resources (ID, Name, Brief Description, Detailed Description, URL, Image Link, Subcategories ID)
+    - [X] Create Tables
+        - [X] Categories (ID, Name)
+        - [X] SubCategories (ID, Name, Brief Description, URL, Image Link, Category ID)
+        - [X] Resources (ID, Name, Brief Description, Detailed Description, URL, Image Link, Subcategories ID)
 
-    - [ ] Add Endpoints to Be Able to Fetch Categories
-    - [ ] Add Endpoints to Be Able to Fetch Subcategories
-    - [ ] Add Endpoints to Be Able to Fetch Resources
-    - [ ] Connect Back-End and Front-End
+    - [X] Add Endpoints to Be Able to Fetch Categories
+    - [X] Add Endpoints to Be Able to Fetch Subcategories
+    - [X] Add Endpoints to Be Able to Fetch Resources
+    - [X] Connect Back-End and Front-End
 
 
 ### Future
