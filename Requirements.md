@@ -15,14 +15,14 @@ We will write here our step by step process to build the website.
 ## Front-End
 
 
-* [ ] Basic HTML & CSS
+* [X] Basic HTML & CSS
 
 
-    - [ ] SideBar
+    - [X] SideBar
         - [x] Basic Sidebar
-        - [ ] SideBar Animation
-        - [ ] Responsiveness
-        - [ ] Add Add Form Link
+        - [X] SideBar Animation
+        - [X] Responsiveness
+        - [X] Add Add Form Link
         - [ ] Link SideBar Items
 
 
