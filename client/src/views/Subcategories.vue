@@ -114,6 +114,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+
+}
+
 a.btn {
   background: #0096a0;
   border-radius: 4px;
@@ -226,7 +232,7 @@ div.card {
   }
 
   div.card-actions {
-  	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.075);
+    box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
     padding: 10px 15px 20px;
     text-align: center;
   }

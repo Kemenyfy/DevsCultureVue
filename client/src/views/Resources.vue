@@ -17,6 +17,7 @@
               <div class="card__expander">
                 <i class="fas fa-times cross [ js-collapser ]"></i>
                 {{res.detailedDescription}}
+                <button class="goToLink">Click Here</button>
               </div>
             </div>
           </div>
@@ -291,6 +292,21 @@ p {
   position: absolute;
   top: 3px;
   right: 6px;
+}
+
+.goToLink {
+  position: absolute;
+  bottom: 5px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.goToLink:active {
+  opacity: .8;
 }
 
 //Expander Widths

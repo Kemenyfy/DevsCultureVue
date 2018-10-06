@@ -37,7 +37,7 @@ export default {
   background-color: #29b7bd;
   border-color: #29b7bd;
   border-radius: 0.25rem;
-  box-shadow: 0 5px 0 #1a91aa;
+  box-shadow: 0 2px 0 lightgrey;
   outline: none;
 }
 
@@ -56,7 +56,7 @@ export default {
   font-weight: bold;
   border-color: #29b7bd;
   border-radius: 0.25rem;
-  box-shadow: 0 5px 0 #1a91aa;
+  box-shadow: 0 2px 0 lightgray;
 }
 
 .addForm:hover {
@@ -66,6 +66,6 @@ export default {
 .addForm:active,
 .button:active {
   box-shadow: none;
-  top: 5px;
+  top: 2px;
 }
 </style>
