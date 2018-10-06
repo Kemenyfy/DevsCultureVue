@@ -12,9 +12,9 @@
                   <option v-for="cat in categoriesData" :key="cat.id" :value="cat.id">{{cat.name}}</option>
                 </select>
               <label for="inputState">Subcategory</label>
-                <select id="inputState" class="form-control" v-model="selectedSubcategory">
-                  <option selected>Choose...</option>
-                  <option v-for="sub in subcategoriesData" :key="sub.id">{{sub.name}}</option>
+                <select id="inputState" class="form-control" v-model="selectedSubcategoryId">
+                  <option selected value="0">Choose...</option>
+                  <option v-for="sub in subcategoriesData" :key="sub.id" v-on:Click="setSubcategoryId(sub)" :value="sub.id">{{sub.name}}</option>
                 </select>
             </div>
             <div class="form-group">
@@ -33,7 +33,7 @@
               <label for="link">Link to Resources Website</label>
               <input type="text" class="form-control" name="link" placeholder="Give me a Link to your resources website." v-model="link">
             </div>
-            <button class="btn btn-primary" type="submit" v-on:click="submitResource">Submit</button>
+            <button class="btn btn-primary" type="submit" v-on:click.prevent="submitResource">Submit</button>
           </form>
         </div>
     </div>
@@ -56,6 +56,7 @@ export default {
       subcategoriesData: [],
       selectedCategory: 0,
       selectedSubcategory: 0,
+      selectedSubcategoryId: 0,
       resourceName: '',
       briefDescription: '',
       detailedDescription: '',
@@ -74,20 +75,23 @@ export default {
                 // setTimeout(this.toggleDescription, 0);
               })
         },
+        setSubcategoryId: function(sub) {
+          this.selectedSubcategoryId = sub.id
+        },
         submitResource: function() {
           console.log(this.resourceName)
           console.log(this.briefDescription)
           console.log(this.detailedDescription)
           console.log(this.link)
-          console.log(this.selectedSubcategory)
+          console.log(this.selectedSubcategoryId)
             fetch("https://localhost:5001/api/subcategory/resource", {
               method: "POST",
               body: JSON.stringify({
-                name: this.resourceName,
-                briefDescription: this.briefDescription,
-                detailedDescription: this.detailedDescription,
-                link: this.link,
-                subcategoryId: this.selectedSubcategory
+                Name: this.resourceName,
+                BriefDescription: this.briefDescription,
+                DetailedDescription: this.detailedDescription,
+                Link: this.link,
+                SubcategoryId: this.selectedSubcategoryId
               }),
               headers: {
                 "Content-Type": "application/json"
@@ -111,3 +115,23 @@ export default {
   }
 };
 </script>
+
+<style>
+
+form {
+  margin: 2% 10%;
+}
+
+.form-row {
+  width: 40%;
+  margin-left: 0.1%;
+}
+
+label {
+  margin-top: 2%;
+}
+
+.form-control {
+  width: 80%;
+}
+</style>
