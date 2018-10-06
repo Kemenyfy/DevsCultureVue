@@ -17,7 +17,7 @@
               <div class="card__expander">
                 <i class="fas fa-times cross [ js-collapser ]"></i>
                 {{res.detailedDescription}}
-                <button class="goToLink">Click Here</button>
+                <a class="goToLink" :href="res.link" target="_">Click Here</a>
               </div>
             </div>
           </div>
@@ -43,7 +43,11 @@ export default {
   },
   mounted: function() {
     console.log(this.$route.params.subcategoryId);
-    fetch(`https://localhost:5001/api/subcategory/resource/${this.$route.params.subcategoryId}`)
+    fetch(
+      `https://localhost:5001/api/subcategory/resource/${
+        this.$route.params.subcategoryId
+      }`
+    )
       .then(resp => resp.json())
       .then(data => {
         console.log(data);
@@ -295,6 +299,9 @@ p {
 }
 
 .goToLink {
+  width: 90px;
+  height: 26px;
+  text-align: center;
   position: absolute;
   bottom: 5px;
   border-radius: 10px;
@@ -306,7 +313,7 @@ p {
 }
 
 .goToLink:active {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 //Expander Widths
