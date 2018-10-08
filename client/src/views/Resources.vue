@@ -9,7 +9,7 @@
             <div class="title-content">
               <h3>{{res.name}}</h3>
               <hr />
-              <div class="intro">Here goes a Brief Descrition of the resource.</div>
+              <div class="intro">{{res.briefDescription}}</div>
               <div class="card-info">{{res.detailedDescription}}</div><!-- /.card-info -->
             </div><!-- /.title-content -->
             <div class="title-link">
