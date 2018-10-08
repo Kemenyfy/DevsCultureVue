@@ -76,6 +76,10 @@ $txt-color: #dce3e7;
   justify-content: center;
 }
 
+.blog-card:hover {
+  opacity: .9;
+}
+
 .blog-card {
   position: relative;
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/bg-blog-card.jpg);
@@ -132,7 +136,7 @@ hr {
 
 .card-info {
   width: 100%;
-  height: 52%;
+  height: 48%;
   margin: 1em auto;
   padding: 0 20px;
   color: $txt-color;
