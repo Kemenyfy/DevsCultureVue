@@ -4,22 +4,16 @@
     <div class="pageContent"> <!-- Page Content -->
         <TopBar />
         <div class="mainBody">
-          <div class="header">
-            <h1 class="header__title">Resources Page</h1>
-            <h2 class="header__subtitle">by/for Devs</h2>
-          </div>
-          <div class="cards" v-for="res in resourcesData" :key="res.id">
-            <div class=" card [ is-collapsed ] ">
-              <div class="card__inner [ js-expander ]">
-                <span>{{res.name}}</span>
-                <i class="far fa-folder"></i>
-              </div>
-              <div class="card__expander">
-                <i class="fas fa-times cross [ js-collapser ]"></i>
-                {{res.detailedDescription}}
-                <a class="goToLink" :href="res.link" target="_">Click Here</a>
-              </div>
-            </div>
+          <div class="cards">
+          <div class="blog-card" v-for="res in resourcesData" :key="res.id">
+            <div class="title-content">
+              <h3>{{res.name}}</h3>
+              <hr />
+              <div class="intro">Here goes a Brief Descrition of the resource.</div>
+              <div class="card-info">{{res.detailedDescription}}</div><!-- /.card-info -->
+              <a class="comments" :href="res.link" target="_">Read More</a>
+            </div><!-- /.title-content -->
+          </div><!-- /.blog-card -->
           </div>
         </div>
     </div>
@@ -54,296 +48,93 @@ export default {
         this.resourcesData = data;
         setTimeout(this.toggleExpander, 0);
       });
-  },
-  methods: {
-    toggleExpander: function() {
-      var $cell = $(".card");
-
-      //open and close card when clicked on card
-      $cell.find(".js-expander").click(function() {
-        var $thisCell = $(this).closest(".card");
-
-        if ($thisCell.hasClass("is-collapsed")) {
-          $cell
-            .not($thisCell)
-            .removeClass("is-expanded")
-            .addClass("is-collapsed")
-            .addClass("is-inactive");
-          $thisCell.removeClass("is-collapsed").addClass("is-expanded");
-
-          if ($cell.not($thisCell).hasClass("is-inactive")) {
-            //do nothing
-          } else {
-            $cell.not($thisCell).addClass("is-inactive");
-          }
-        } else {
-          $thisCell.removeClass("is-expanded").addClass("is-collapsed");
-          $cell.not($thisCell).removeClass("is-inactive");
-        }
-      });
-
-      //close card when click on cross
-      $cell.find(".js-collapser").click(function() {
-        var $thisCell = $(this).closest(".card");
-
-        $thisCell.removeClass("is-expanded").addClass("is-collapsed");
-        $cell.not($thisCell).removeClass("is-inactive");
-      });
-    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
 
-$light-gray: #eceef1;
-$gray: darken(#eceef1, 30%);
-$slate: darken(#eceef1, 70%);
-$turquoise: #1abc9c;
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background: $light-gray;
-  font-family: "Slabo 27px", serif;
-  color: $slate;
-}
+// variables
+$h-color: #9cc9e3;
+$yellow: #d0bb57;
+$txt-color: #dce3e7;
 
 .mainBody {
-  margin: 5em auto;
-  max-width: 1000px;
-  background-color: #fff;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.06);
-}
-
-.header {
-  padding: 30px 30px 0;
   text-align: center;
-
-  &__title {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 2.5em;
-    font-weight: 500;
-    line-height: 1.1;
-  }
-  &__subtitle {
-    margin: 0;
-    font-size: 1.5em;
-    color: $gray;
-    font-family: "Yesteryear", cursive;
-    font-weight: 500;
-    line-height: 1.1;
-  }
-}
-
-p {
-  margin: 10px;
-}
-//Grid Container
-.cards {
-  padding: 15px;
-  display: flex;
-  flex-flow: row wrap;
-}
-
-//Cards
-.card {
-  margin: 15px;
-  width: calc((100% / 3) - 30px);
-  transition: all 0.2s ease-in-out;
-
-  //media queries for stacking cards
-  @media screen and (max-width: 991px) {
-    width: calc((100% / 2) - 30px);
-  }
-
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
-
-  &:hover {
-    .card__inner {
-      background-color: $turquoise;
-      transform: scale(1.05);
-    }
-  }
-
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 30px;
-    position: relative;
-    cursor: pointer;
-
-    background-color: $gray;
-    color: $light-gray;
-    font-size: 1.5em;
-    text-align: center;
-
-    transition: all 0.2s ease-in-out;
-
-    &:after {
-      transition: all 0.3s ease-in-out;
-    }
-
-    .fa {
-      width: 100%;
-      margin-top: 0.25em;
-    }
-  }
-
-  //Expander
-  &__expander {
-    padding: 10px;
-    transition: all 0.2s ease-in-out;
-    background-color: $slate;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $light-gray;
-    font-size: 1.5em;
-
-    .fa {
-      font-size: 0.75em;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-      &:hover {
-        opacity: 0.9;
-      }
-    }
-  }
-
-  &.is-collapsed {
-    .card__inner {
-      &:after {
-        content: "";
-        opacity: 0;
-      }
-    }
-    .card__expander {
-      max-height: 0;
-      min-height: 0;
-      overflow: hidden;
-      margin-top: 0;
-      opacity: 0;
-    }
-  }
-
-  &.is-expanded {
-    .card__inner {
-      background-color: $turquoise;
-
-      &:after {
-        content: "";
-        opacity: 1;
-        display: block;
-        height: 0;
-        width: 0;
-        position: absolute;
-        bottom: -30px;
-        left: calc(50% - 15px);
-        border-left: 15px solid transparent;
-        border-right: 15px solid transparent;
-        border-bottom: 15px solid #333a45;
-      }
-
-      //folder open icon
-      .fa:before {
-        content: "\f115";
-      }
-    }
-
-    .card__expander {
-      max-height: 1000px;
-      min-height: 200px;
-      overflow: visible;
-      margin-top: 30px;
-      opacity: 1;
-    }
-
-    &:hover {
-      .card__inner {
-        transform: scale(1);
-      }
-    }
-  }
-
-  &.is-inactive {
-    .card__inner {
-      pointer-events: none;
-      opacity: 0.5;
-    }
-
-    &:hover {
-      .card__inner {
-        background-color: $gray;
-        transform: scale(1);
-      }
-    }
-  }
-}
-
-.cross {
-  position: absolute;
-  top: 3px;
-  right: 6px;
-}
-
-.goToLink {
-  width: 90px;
-  height: 26px;
-  text-align: center;
-  position: absolute;
-  bottom: 5px;
-  border-radius: 10px;
   color: white;
-  background-color: black;
-  border: none;
-  font-size: 16px;
-  outline: none;
 }
 
-.goToLink:active {
-  opacity: 0.8;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-//Expander Widths
-
-//when 3 cards in a row
-@media screen and (min-width: 992px) {
-  .card:nth-of-type(3n + 2) .card__expander {
-    margin-left: calc(-100% - 30px);
-  }
-  .card:nth-of-type(3n + 3) .card__expander {
-    margin-left: calc(-200% - 60px);
-  }
-  .card:nth-of-type(3n + 4) {
-    clear: left;
-  }
-  .card__expander {
-    width: calc(300% + 60px);
-  }
+.blog-card {
+  width: 28%;
+  height: 360px;
+  border-radius: 10px;
+  margin: 15px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/bg-blog-card.jpg);
 }
 
-//when 2 cards in a row
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .card:nth-of-type(2n + 2) .card__expander {
-    margin-left: calc(-100% - 30px);
-  }
-  .card:nth-of-type(2n + 3) {
-    clear: left;
-  }
-  .card__expander {
-    width: calc(200% + 30px);
-  }
+.title-content {
+  text-align: center;
+  margin: 20px 0 0 0;
+  width: 100%;
 }
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: $h-color;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0;
+}
+
+hr {
+  width: 50px;
+  height: 3px;
+  margin: 20px auto;
+  border: 0;
+  background: $yellow;
+}
+
+.intro {
+  width: 170px;
+  margin: 0 auto;
+  color: $txt-color;
+  font-family: "Droid Serif", serif;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 18px;
+}
+
+.card-info {
+  width: 100%;
+  margin: 1em auto;
+  padding: 0 20px;
+  color: $txt-color;
+  font-family: "Droid Serif", serif;
+  line-height: 24px;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+
+.card-info:hover {
+  opacity: 1;
+  // bottom: 120px;
+}
+
+a {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  color: $txt-color;
+  font-family: "Roboto", sans-serif;
+  display: inline-block;
+}
+
 </style>
