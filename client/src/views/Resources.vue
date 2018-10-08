@@ -81,7 +81,7 @@ $txt-color: #dce3e7;
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/bg-blog-card.jpg);
   display: inline-block;
   margin: 1em;;
-  max-width: 15em;
+  width: 15em;
   height: 360px;
   border-radius: 10px;
   display: flex;
@@ -132,7 +132,7 @@ hr {
 
 .card-info {
   width: 100%;
-  height: 55%;
+  height: 52%;
   margin: 1em auto;
   padding: 0 20px;
   color: $txt-color;
