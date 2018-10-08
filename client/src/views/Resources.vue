@@ -11,11 +11,13 @@
               <hr />
               <div class="intro">Here goes a Brief Descrition of the resource.</div>
               <div class="card-info">{{res.detailedDescription}}</div><!-- /.card-info -->
-              <a class="comments" :href="res.link" target="_">Read More</a>
             </div><!-- /.title-content -->
+            <div class="title-link">
+              <a class="goToLink" :href="res.link" target="_">Read More</a>
+            </div>
           </div><!-- /.blog-card -->
-          </div>
         </div>
+      </div>
     </div>
   </div>
  
@@ -62,27 +64,43 @@ $yellow: #d0bb57;
 $txt-color: #dce3e7;
 
 .mainBody {
+  position: relative;
   text-align: center;
   color: white;
 }
 
 .cards {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .blog-card {
-  width: 28%;
+  position: relative;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/bg-blog-card.jpg);
+  display: inline-block;
+  margin: 1em;;
+  max-width: 15em;
   height: 360px;
   border-radius: 10px;
-  margin: 15px;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/bg-blog-card.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title-content {
+  position: relative;
   text-align: center;
-  margin: 20px 0 0 0;
+  margin: 15px 0 0 0;
   width: 100%;
+  height: 90%;
+}
+
+.title-link {
+  height: 10%;
+  margin: 5px;
 }
 
 h3 {
@@ -114,11 +132,13 @@ hr {
 
 .card-info {
   width: 100%;
+  height: 55%;
   margin: 1em auto;
   padding: 0 20px;
   color: $txt-color;
   font-family: "Droid Serif", serif;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 20px;
   opacity: 0;
   transition: bottom 0.5s, opacity 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
@@ -129,7 +149,7 @@ hr {
 }
 
 a {
-  position: absolute;
+  bottom: 1px;
   text-decoration: none;
   color: white;
   color: $txt-color;
