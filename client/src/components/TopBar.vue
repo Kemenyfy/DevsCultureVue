@@ -42,7 +42,7 @@ export default {
 }
 
 .button:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .addForm {
@@ -60,12 +60,29 @@ export default {
 }
 
 .addForm:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .addForm:active,
 .button:active {
   box-shadow: none;
   top: 2px;
+}
+
+@media (max-width: 1024px) {
+  .addForm {
+    background-color: black;
+    font-weight: 500;
+    box-shadow: none;
+  }
+
+  .button {
+    box-shadow: none;
+  }
+
+  .addForm:active,
+  .button:active {
+    top: 0px;
+  }
 }
 </style>

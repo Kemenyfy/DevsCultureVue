@@ -82,7 +82,7 @@ $txt-color: #dce3e7;
 
 .blog-card {
   position: relative;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/bg-blog-card.jpg);
+  background-image: url("../assets/BlogCard.jpeg");
   display: inline-block;
   margin: 1em;;
   width: 15em;

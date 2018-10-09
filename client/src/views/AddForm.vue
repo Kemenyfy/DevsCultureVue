@@ -72,7 +72,6 @@ export default {
         .then(data => {
           console.log(data);
           this.subcategoriesData = data;
-          // setTimeout(this.toggleDescription, 0);
         });
     },
     setSubcategoryId: function(sub) {
@@ -100,7 +99,16 @@ export default {
         .then(resp => resp.json())
         .then(ResourceData => {
           console.log(ResourceData);
+          this.formSubmit();
         });
+    },
+    formSubmit: function() {
+      this.resourceName = "";
+      this.briefDescription = "";
+      this.detailedDescription = "";
+      this.link = "";
+      this.selectedCategory = "";
+      this.selectedSubcategory = "";
     }
   },
   mounted: function() {
@@ -151,12 +159,28 @@ label {
 
 .submit:hover {
   opacity: 0.8;
-  background-color: #29b7bd;
 }
 
 .submit:active {
   box-shadow: none;
   top: 2px;
+}
+
+@media (max-width: 1024px) {
+  .submit {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    box-shadow: none;
+  }
+
+  .submit:hover {
+    opacity: 0.8;
+  }
+
+  .submit:active {
+    top: 0px;
+  }
 }
 
 @media (max-width: 768px) {
