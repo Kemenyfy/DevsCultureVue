@@ -19,6 +19,7 @@ namespace Server
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            new DevsCultureDBContext().Database.Migrate();
         }
 
         public IConfiguration Configuration { get; }
@@ -26,12 +27,12 @@ namespace Server
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
+            var conn = Environment.GetEnvironmentVariable("CONNECTION_STRING") ?? "server=localhost;database=DevsCultureDB";
             services
                 .AddEntityFrameworkNpgsql()
                 .AddDbContext<DevsCultureDBContext>(opt =>
-                    opt.UseNpgsql("server=localhost; Database=DevsCultureDB"));
-
+                    opt.UseNpgsql(conn));
+            services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
         }
@@ -48,13 +49,12 @@ namespace Server
                 app.UseHsts();
             }
 
-            app.UseCors(builder =>
-               builder
-               .AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader()
-               .AllowCredentials());
             app.UseHttpsRedirection();
+            app.UseCors(builder => builder
+               .AllowAnyHeader()
+               .AllowAnyMethod()
+               .AllowAnyOrigin()
+               .AllowCredentials());
             app.UseMvc();
         }
     }

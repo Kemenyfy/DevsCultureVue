@@ -1,0 +1,14 @@
+dotnet publish -c Release
+
+cp dockerfile ./bin/release/netcoreapp2.1/publish
+
+docker build -t devsculture-image ./bin/release/netcoreapp2.1/publish
+
+docker tag devsculture-image registry.heroku.com/devsculture/web
+
+docker push registry.heroku.com/devsculture/web
+
+heroku container:release web -a devsculture
+
+# sudo chmod 755 deploy.sh
+# ./deploy.sh
