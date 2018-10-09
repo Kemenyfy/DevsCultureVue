@@ -19,15 +19,15 @@
             </div>
             <div class="form-group">
               <label for="resourceName">Resource Name</label>
-              <input type="text" class="form-control" name="resourceName" placeholder="Keep it short please!" maxlength="23" v-model="resourceName" required>
+              <input type="text" class="form-control" name="resourceName" placeholder="Keep it short please!" maxlength="24" v-model="resourceName" required>
             </div>
             <div class="form-group">
               <label for="briefDescription">Resource Brief Description</label>
-              <input type="text" class="form-control" name="briefDescription" placeholder="Give me a short description of it." v-model="briefDescription">
+              <input type="text" class="form-control" name="briefDescription" placeholder="Give me a short description of it." maxlength="80" v-model="briefDescription">
             </div>
             <div class="form-group">
               <label for="detailedDescription" required>Resource Description</label>
-              <input type="text" class="form-control" name="detailedDescription" placeholder="Give me a brief description of it." maxlength="160" v-model="detailedDescription" required>
+              <input type="text" class="form-control" name="detailedDescription" placeholder="Give me a brief description of it." maxlength="480" v-model="detailedDescription" required>
             </div>
             <div class="form-group">
               <label for="link" required>Link to Resources Website</label>

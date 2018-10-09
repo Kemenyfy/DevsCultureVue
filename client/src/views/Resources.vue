@@ -58,10 +58,11 @@ export default {
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
 
-// variables
+// Color Variables
 $h-color: #9cc9e3;
 $yellow: #d0bb57;
 $txt-color: #dce3e7;
+$txt-color2: #000;
 
 .mainBody {
   position: relative;
@@ -108,9 +109,8 @@ $txt-color: #dce3e7;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
-  letter-spacing: 2px;
   color: $h-color;
   font-family: "Roboto", sans-serif;
   margin-bottom: 0;
@@ -125,11 +125,12 @@ hr {
 }
 
 .intro {
-  width: 170px;
+  width: 90%;
   margin: 0 auto;
-  color: $txt-color;
+  color: $txt-color2;
   font-family: "Droid Serif", serif;
   font-size: 13px;
+  font-weight: 400;
   font-style: italic;
   line-height: 18px;
 }
@@ -139,12 +140,14 @@ hr {
   height: 48%;
   margin: 1em auto;
   padding: 0 20px;
-  color: $txt-color;
+  color: $txt-color2;
   font-family: "Droid Serif", serif;
   font-size: 13px;
+  font-weight: 400;
   line-height: 20px;
   opacity: 0;
   transition: bottom 0.5s, opacity 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
+  overflow: scroll;
 }
 
 .card-info:hover {
