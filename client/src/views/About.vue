@@ -3,75 +3,52 @@
     <Nav /> <!-- Sidebar -->
     <div class="pageContent"> <!-- Page Content -->
         <TopBar />
-        <div class="mainBody"><section id="page3" class="section-gray">
-        <div class="content">
-          <div class="container clearfix">
-            <div class="row services">
-              <div class="col-md-12">
-                <h2 class="heading">My work is</h2>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="box">
-                      <div class="icon">
-                        <i class="fas fa-keyboard"></i>
+        <div class="mainBody">
+          <section id="page3" class="section-gray">
+            <div class="content">
+              <div class="container clearfix">
+                <div class="row services">
+                  <div class="col-sm-12">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="box">
+                          <div class="icon">
+                            <i class="fas fa-keyboard"></i>
+                          </div>
+                          <h4 class="heading">Our Mission</h4>
+                          <p>DevsCulture is a catalyst for developers to feel, see, and claim their power.</p>
+                        </div>
                       </div>
-                      <h4 class="heading">Pixel-Perfect</h4>
-                      <p>My code is readable and maintainable and I am proud of the results.</p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="box">
-                      <div class="icon">
-                        <i class="fas fa-palette"></i>
+                      <div class="col-sm-6">
+                        <div class="box">
+                          <div class="icon">
+                            <i class="fas fa-palette"></i>
+                          </div>
+                          <h4 class="heading">Our Essence</h4>
+                          <p>At our core, DevsCulture operates on Imagination, Individuality, Inclusivity, & Impact.</p>
+                        </div>
                       </div>
-                      <h4 class="heading">Tailored to you</h4>
-                      <p>I work hard to find the best solution for my users. </p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="box">
-                      <div class="icon">
-                        <i class="fas fa-heart"></i>
+                      <div class="col-sm-6">
+                        <div class="box">
+                          <div class="icon">
+                            <i class="fas fa-heart"></i>
+                          </div>
+                          <h4 class="heading">Our Promise</h4>
+                          <p>We deliver optimistic and diverse resources, experiences, and points of view to our audience of smart, curious, passionate developers.</p>
                       </div>
-                      <h4 class="heading">Built with Love</h4>
-                      <p>I put a lot of passion in my work; I love what I do. </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="box">
-                      <div class="icon">
-                        <i class="fas fa-fighter-jet"></i>
                       </div>
-                      <h4 class="heading">Fast</h4>
-                      <p>Fast load times and lag free interaction.</p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="box">
-                      <div class="icon">
-                        <i class="fas fa-mobile-alt"></i>
+                      <div class="col-sm-6">
+                        <div class="box">
+                          <h4 class="heading">Our Vibe</h4>
+                          <p>At DevsCulture, we make magic. We dream it, and then do it—together—every day reinventing what's possible.</p>
+                        </div>
                       </div>
-                      <h4 class="heading">Responsive</h4>
-                      <p>My layouts will work on any device, big or small.</p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="box">
-                      <div class="icon">
-                        <i class="fas fa-expand-arrows-alt"></i>
-                      </div>
-                      <h4 class="heading">Dynamic</h4>
-                      <p>I enjoy making pages come to life.</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>  
         </div>
     </div>
   </div>
@@ -89,3 +66,13 @@ export default {
   }
 };
 </script>
+
+<style>
+
+p, h4, fas {
+  color: white;
+}
+@media (max-width: 768px) {
+}
+</style>
+
