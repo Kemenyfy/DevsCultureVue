@@ -67,7 +67,7 @@ export default {
     onChange() {
       console.log(this.value);
       console.log(this.selectedCategory);
-      fetch(`https://localhost:5001/api/subcategory/${this.selectedCategory}`)
+      fetch(`https://devsculture.herokuapp.com/api/subcategory/${this.selectedCategory}`)
         .then(resp => resp.json())
         .then(data => {
           console.log(data);

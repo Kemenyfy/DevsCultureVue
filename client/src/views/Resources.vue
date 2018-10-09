@@ -40,7 +40,7 @@ export default {
   mounted: function() {
     console.log(this.$route.params.subcategoryId);
     fetch(
-      `https://localhost:5001/api/subcategory/resource/${
+      `https://devsculture.herokuapp.com/api/subcategory/resource/${
         this.$route.params.subcategoryId
       }`
     )
@@ -62,7 +62,7 @@ export default {
 $h-color: #9cc9e3;
 $yellow: #d0bb57;
 $txt-color: #dce3e7;
-$txt-color2: #000;
+$txt-color2: white;
 
 .mainBody {
   position: relative;
@@ -83,7 +83,7 @@ $txt-color2: #000;
 
 .blog-card {
   position: relative;
-  background-image: url("../assets/BlogCard.jpeg");
+  background-image: url("../assets/BlogCard2.jpeg");
   display: inline-block;
   margin: 1em;;
   width: 15em;
@@ -93,6 +93,7 @@ $txt-color2: #000;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border: 4px solid white;
 }
 
 .title-content {
