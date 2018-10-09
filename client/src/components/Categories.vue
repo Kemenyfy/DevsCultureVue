@@ -19,7 +19,7 @@ export default {
     };
   },
   mounted: function() {
-    fetch("https://localhost:5001/api/category")
+    fetch("https://devsculture.herokuapp.com/api/category")
       .then(resp => resp.json())
       .then(data => {
         console.log(data);
