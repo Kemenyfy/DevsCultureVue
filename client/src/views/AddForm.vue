@@ -83,7 +83,7 @@ export default {
       console.log(this.detailedDescription);
       console.log(this.link);
       console.log(this.selectedSubcategoryId);
-      fetch("https://localhost:5001/api/subcategory/resource", {
+      fetch("https://devsculture.herokuapp.com/api/subcategory/resource", {
         method: "POST",
         body: JSON.stringify({
           Name: this.resourceName,
@@ -112,7 +112,7 @@ export default {
     }
   },
   mounted: function() {
-    fetch("https://localhost:5001/api/category")
+    fetch("https://devsculture.herokuapp.com/api/category")
       .then(resp => resp.json())
       .then(data => {
         console.log(data);
