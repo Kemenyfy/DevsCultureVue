@@ -67,7 +67,7 @@ export default {
     onChange() {
       console.log(this.value);
       console.log(this.selectedCategory);
-      fetch(`https://devsculture.herokuapp.com/api/subcategory/${this.selectedCategory}`)
+      fetch(`${process.env.VUE_APP_ROOT_API}/subcategory/${this.selectedCategory}`)
         .then(resp => resp.json())
         .then(data => {
           console.log(data);
@@ -83,7 +83,7 @@ export default {
       console.log(this.detailedDescription);
       console.log(this.link);
       console.log(this.selectedSubcategoryId);
-      fetch("https://devsculture.herokuapp.com/api/subcategory/resource", {
+      fetch(`${process.env.VUE_APP_ROOT_API}/subcategory/resource`, {
         method: "POST",
         body: JSON.stringify({
           Name: this.resourceName,
@@ -112,7 +112,7 @@ export default {
     }
   },
   mounted: function() {
-    fetch("https://devsculture.herokuapp.com/api/category")
+    fetch(`${process.env.VUE_APP_ROOT_API}/category`)
       .then(resp => resp.json())
       .then(data => {
         console.log(data);

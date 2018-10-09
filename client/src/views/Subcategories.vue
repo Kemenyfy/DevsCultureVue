@@ -45,7 +45,7 @@ export default {
   },
   mounted: function() {
     console.log(this.$route.params.categoryId);
-    fetch(`https://devsculture.herokuapp.com/api/subcategory/${this.$route.params.categoryId}`)
+    fetch(`${process.env.VUE_APP_ROOT_API}/subcategory/${this.$route.params.categoryId}`)
       .then(resp => resp.json())
       .then(data => {
         console.log(data);

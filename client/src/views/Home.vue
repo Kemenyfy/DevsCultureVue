@@ -21,6 +21,9 @@ export default {
     Nav,
     TopBar,
     Categories,
+  }, 
+  mounted: function(){
+    console.log(process.env)
   }
 };
 </script>

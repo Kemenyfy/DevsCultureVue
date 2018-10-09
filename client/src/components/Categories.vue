@@ -19,7 +19,7 @@ export default {
     };
   },
   mounted: function() {
-    fetch("https://devsculture.herokuapp.com/api/category")
+    fetch(`${process.env.VUE_APP_ROOT_API}/category`)
       .then(resp => resp.json())
       .then(data => {
         console.log(data);
