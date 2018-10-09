@@ -165,4 +165,10 @@ a {
   display: inline-block;
 }
 
+@media (max-width: 1024px) {
+  .card-info {
+    opacity: 1;
+  }
+}
+
 </style>

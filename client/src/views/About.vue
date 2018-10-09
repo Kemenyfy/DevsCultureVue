@@ -12,27 +12,18 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="box">
-                          <div class="icon">
-                            <i class="fas fa-keyboard"></i>
-                          </div>
                           <h4 class="heading">Our Mission</h4>
                           <p>DevsCulture is a catalyst for developers to feel, see, and claim their power.</p>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="box">
-                          <div class="icon">
-                            <i class="fas fa-palette"></i>
-                          </div>
                           <h4 class="heading">Our Essence</h4>
                           <p>At our core, DevsCulture operates on Imagination, Individuality, Inclusivity, & Impact.</p>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="box">
-                          <div class="icon">
-                            <i class="fas fa-heart"></i>
-                          </div>
                           <h4 class="heading">Our Promise</h4>
                           <p>We deliver optimistic and diverse resources, experiences, and points of view to our audience of smart, curious, passionate developers.</p>
                       </div>
