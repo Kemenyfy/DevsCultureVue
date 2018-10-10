@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="nav">
     <nav id="sidebar">
       <div class="sidebar-header">
         <img src="../assets/logo.png" class="logo"> 

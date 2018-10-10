@@ -13,25 +13,25 @@
                       <div class="col-sm-6">
                         <div class="box">
                           <h4 class="heading">Our Mission</h4>
-                          <p>DevsCulture is a catalyst for developers to feel, see, and claim their power.</p>
+                          <p class="content">DevsCulture is a catalyst for developers to feel, see, and claim their power.</p>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="box">
                           <h4 class="heading">Our Essence</h4>
-                          <p>At our core, DevsCulture operates on Imagination, Individuality, Inclusivity, & Impact.</p>
+                          <p class="content">At our core, DevsCulture operates on Imagination, Individuality, Inclusivity, & Impact.</p>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="box">
                           <h4 class="heading">Our Promise</h4>
-                          <p>We deliver optimistic and diverse resources, experiences, and points of view to our audience of smart, curious, passionate developers.</p>
+                          <p class="content">We deliver optimistic and diverse resources, experiences, and points of view to our audience of smart, curious, passionate developers.</p>
                       </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="box">
                           <h4 class="heading">Our Vibe</h4>
-                          <p>At DevsCulture, we make magic. We dream it, and then do it—together—every day reinventing what's possible.</p>
+                          <p class="content">At DevsCulture, we make magic. We dream it, and then do it together every day reinventing what's possible.</p>
                         </div>
                       </div>
                     </div>
@@ -58,11 +58,24 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
-p, h4, fas {
+.mainBody {
+  text-align: center;
+ }
+
+.heading {
+  font-size: 2.5em;
+}
+
+p, .heading {
   color: white;
 }
+
+.box {
+  padding: 3em;
+}
+
 @media (max-width: 768px) {
 }
 </style>
