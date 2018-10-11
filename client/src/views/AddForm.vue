@@ -143,6 +143,11 @@ label {
   width: 80%;
 }
 
+.btn {
+  background-color: #29b7bd;
+  border: #29b7bd;
+}
+
 .submit {
   margin: 2%;
   color: white;
