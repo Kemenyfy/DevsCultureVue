@@ -91,7 +91,7 @@ p {
   }
 
   p {
-    height: 2em;
+    height: 2.5em;
   }
 }
 
