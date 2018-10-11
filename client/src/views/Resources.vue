@@ -62,9 +62,11 @@ $txt-color: #dce3e7;
 $txt-color2: white;
 
 .mainBody {
+  height: 100vh;
   position: relative;
   text-align: center;
   color: white;
+  overflow: hidden;
 }
 
 .cards {

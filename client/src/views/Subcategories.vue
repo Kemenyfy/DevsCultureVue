@@ -43,65 +43,70 @@ export default {
       subcategoriesData: []
     };
   },
+  watch: {
+    // call again the method if the route changes
+    $route: "updateData"
+  },
   mounted: function() {
-    console.log(this.$route.params.categoryId);
-    fetch(`${process.env.VUE_APP_ROOT_API}/subcategory/${this.$route.params.categoryId}`)
-      .then(resp => resp.json())
-      .then(data => {
-        console.log(data);
-        this.subcategoriesData = data;
-        setTimeout(this.toggleDescription, 0);
-      })
+    this.updateData();
   },
   methods: {
-      toggleDescription: function() {
-        $(document).ready(function(){
-          var zindex = 10;
-          
-          $("div.card").click(function(e){
-            e.preventDefault();
-        
-            var isShowing = false;
-        
-            if ($(this).hasClass("show")) {
-              isShowing = true
-            }
-        
-            if ($("div.cards").hasClass("showing")) {
-              // a card is already in view
-              $("div.card.show")
-                .removeClass("show");
-        
-              if (isShowing) {
-                // this card was showing - reset the grid
-                $("div.cards")
-                  .removeClass("showing");
-              } else {
-                // this card isn't showing - get in with it
-                $(this)
-                  .css({zIndex: zindex})
-                  .addClass("show");
-        
-              }
-        
-              zindex++;
-        
+    toggleDescription: function() {
+      $(document).ready(function() {
+        var zindex = 10;
+
+        $("div.card").click(function(e) {
+          e.preventDefault();
+
+          var isShowing = false;
+
+          if ($(this).hasClass("show")) {
+            isShowing = true;
+          }
+
+          if ($("div.cards").hasClass("showing")) {
+            // a card is already in view
+            $("div.card.show").removeClass("show");
+
+            if (isShowing) {
+              // this card was showing - reset the grid
+              $("div.cards").removeClass("showing");
             } else {
-              // no cards in view
-              $("div.cards")
-                .addClass("showing");
+              // this card isn't showing - get in with it
               $(this)
-                .css({zIndex:zindex})
+                .css({ zIndex: zindex })
                 .addClass("show");
-        
-              zindex++;
             }
-            
-          });
+
+            zindex++;
+          } else {
+            // no cards in view
+            $("div.cards").addClass("showing");
+            $(this)
+              .css({ zIndex: zindex })
+              .addClass("show");
+
+            zindex++;
+          }
         });
-      }
-  }    
-}
+      });
+    },
+    updateData: function() {
+      console.log(this.$route.params.categoryId);
+      fetch(
+        `${process.env.VUE_APP_ROOT_API}/subcategory/${
+          this.$route.params.categoryId
+        }`
+      )
+        .then(resp => resp.json())
+        .then(data => {
+          console.log(data);
+          this.subcategoriesData = data;
+          setTimeout(this.toggleDescription, 0);
+        });
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -110,26 +115,25 @@ export default {
 body {
   background: #dce1df;
   color: #4f585e;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   text-rendering: optimizeLegibility;
 }
 
 a {
   text-decoration: none;
   color: white;
-
 }
 
 a.btn {
   background: #0096a0;
   border-radius: 4px;
-	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
   color: #ffffff;
   display: inline-block;
   padding: 6px 30px 8px;
   position: relative;
   text-decoration: none;
-	transition: all 0.1s 0s ease-out;
+  transition: all 0.1s 0s ease-out;
 }
 
 .no-touch a.btn:hover {
@@ -142,8 +146,8 @@ a.btn {
 .no-touch a.btn:active,
 a.btn:active {
   background: darken(#0096a0, 2.5);
-  box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
-  transform: translate3d(0,1px,0);
+  box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
+  transform: translate3d(0, 1px, 0);
   transition: all 0.025s 0s ease-out;
 }
 
@@ -180,7 +184,7 @@ div.card {
     padding: 6px 15px 10px;
     position: relative;
     z-index: 0;
-    
+
     a.toggle-info {
       border-radius: 32px;
       height: 32px;
@@ -189,7 +193,7 @@ div.card {
       right: 15px;
       top: 10px;
       width: 32px;
-      
+
       span {
         background: #ffffff;
         display: block;
@@ -199,7 +203,7 @@ div.card {
         transition: all 0.15s 0s ease-out;
         width: 12px;
       }
-      
+
       span.left {
         right: 14px;
         transform: rotate(45deg);
@@ -209,14 +213,14 @@ div.card {
         transform: rotate(-45deg);
       }
     }
-    
+
     h2 {
       font-size: 24px;
       font-weight: 700;
       letter-spacing: -0.05em;
       margin: 0;
       padding: 0;
-      
+
       small {
         display: block;
         font-size: 8px;
@@ -236,7 +240,7 @@ div.card {
     padding: 10px 15px 20px;
     text-align: center;
   }
-  
+
   div.card-flap {
     background: darken(#ffffff, 15);
     position: absolute;
@@ -254,7 +258,6 @@ div.card {
     transition: all 0.3s 0s ease-out;
     z-index: -2;
   }
-  
 }
 
 div.cards.showing {
@@ -265,7 +268,7 @@ div.cards.showing {
   }
 }
 
-.no-touch  div.cards.showing {
+.no-touch div.cards.showing {
   div.card:hover {
     opacity: 0.94;
     transform: scale(0.92);
