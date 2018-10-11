@@ -62,11 +62,11 @@ $txt-color: #dce3e7;
 $txt-color2: white;
 
 .mainBody {
-  height: 100vh;
+  height: 84%;
   position: relative;
   text-align: center;
   color: white;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .cards {
