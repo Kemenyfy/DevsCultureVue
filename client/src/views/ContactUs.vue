@@ -6,7 +6,7 @@
         <section>
             <div class="content">
                 <h2 class="heading">Contact Me</h2>
-                <p class="lead contactExtra">Let's build something together!</p>
+                <p class="lead contactExtra">Let us know if we are missing a Category/Subcategory. Also if we can serve you somehow.</p>
                 <form id="contact-form" method="post" action="https://formspree.io/gus.kemenyfy@gmail.com" class="contact-form">
                   <div class="controls">
                     <div class="name">
@@ -80,6 +80,11 @@ export default {
 .content {
     display: flex;
     flex-direction: column;
+}
+
+p {
+  font-size: 1em;
+  margin: 0 4% 0 4%;
 }
 
 @media (max-width: 768px) {

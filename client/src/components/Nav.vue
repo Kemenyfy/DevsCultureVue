@@ -11,8 +11,7 @@
           <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
           <ul class="collapse list-unstyled" id="pageSubmenu">
             <li><router-link to="/subcategories/1">Programming Languages</router-link></li>
-            <li><router-link :to="{name:'subcategories', params:{categoryId:2}}" >Example</router-link></li>
-            <li><router-link to="/subcategories/2">Front-End Techs</router-link></li>
+            <li><router-link :to="{name:'subcategories', params:{categoryId:2}}">Front-End Techs</router-link></li>
             <li><router-link to="/subcategories/3">Back-End Techs</router-link></li>
             <li><router-link to="/subcategories/4">Design</router-link></li>
             <li><router-link to="/subcategories/5">Hosting</router-link></li>
@@ -25,9 +24,9 @@
             <li><router-link to="/subcategories/12">Meetups</router-link></li>
           </ul>
         </li>
-        <li><a href="#">Blogs</a></li>
+        <!-- <li><a href="#">Blogs</a></li> -->
         <li><router-link to="/contactUs">Contact Us</router-link></li>
-        <li><a href="#">Sponsors</a></li>
+        <!-- <li><a href="#">Sponsors</a></li> -->
       </ul>
     </nav>
   </div>
