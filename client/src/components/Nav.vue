@@ -17,10 +17,10 @@
             <li><router-link to="/subcategories/5">Hosting</router-link></li>
             <li><router-link to="/subcategories/6">Browsers</router-link></li>
             <li><router-link to="/subcategories/7">Collaboration</router-link></li>
-            <li><router-link to="/subcategories/8">News</router-link></li>
+            <li><router-link to="/subcategories/8">Utilities</router-link></li>
             <li><router-link to="/subcategories/9">Coding Schools</router-link></li>
-            <li><router-link to="/subcategories/10">Books</router-link></li>
-            <li><router-link to="/subcategories/11">Podcasts</router-link></li>
+            <li><router-link to="/subcategories/10">Cybersecurity</router-link></li>
+            <li><router-link to="/subcategories/11">Podcasts, Books & News</router-link></li>
             <li><router-link to="/subcategories/12">Meetups</router-link></li>
           </ul>
         </li>
