@@ -24,7 +24,7 @@ export default {
       .then(data => {
         console.log(data);
         this.categoriesData = data;
-      })
+      });
   }
 };
 </script>
@@ -88,6 +88,10 @@ p {
     transition: 0.5s;
     transition-delay: 0.2s;
     opacity: 1;
+  }
+
+  p {
+    height: 2em;
   }
 }
 
