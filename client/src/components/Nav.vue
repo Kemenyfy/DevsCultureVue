@@ -26,7 +26,7 @@
           </ul>
         </li>
         <li><a href="#">Blogs</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><router-link to="/contactUs">Contact Us</router-link></li>
         <li><a href="#">Sponsors</a></li>
       </ul>
     </nav>
