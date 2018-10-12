@@ -5,6 +5,7 @@ import AddForm from './views/AddForm.vue'
 import Subcategories from './views/Subcategories'
 import Resources from './views/Resources'
 import ContactUs from './views/ContactUs'
+import ThankYou from './views/ThankYou'
 
 Vue.use(Router)
 
@@ -44,6 +45,11 @@ export default new Router({
       path: '/contactUs',
       name: 'contactUs',
       component: ContactUs
+    },
+    {
+      path: '/thankyou',
+      name: 'thankyou',
+      component: ThankYou
     },
   ]
 })

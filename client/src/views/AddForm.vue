@@ -33,26 +33,8 @@
               <label for="link" required>Link to Resources Website</label>
               <input type="text" class="form-control" name="link" placeholder="Include http:// or https://" v-model="link" required>
             </div>
-            <button class="btn submit" type="submit" value="submit" v-on:click.prevent="submitResource">Submit</button>
+            <button class="btn submit" type="submit" value="submit" v-on:click.prevent="submitResource"><router-link to="/thankyou">Submit</router-link></button>
           </form>
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Message from Extracurricular</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-          <div class="modal-body">
-              Team Added
-          </div>
-             <div class="modal-footer">
-              <button type="button"  class="btn btn-secondary" data-dismiss="modal">Close</button>
-             </div>
-            </div>
-          </div>
-        </div>
         </div>
     </div>
   </div>
@@ -64,6 +46,7 @@ import Nav from "@/components/Nav.vue";
 import TopBar from "@/components/TopBar.vue";
 
 export default {
+  // name: "modal",
   components: {
     Nav,
     TopBar
@@ -85,7 +68,9 @@ export default {
     onChange() {
       console.log(this.value);
       console.log(this.selectedCategory);
-      fetch(`${process.env.VUE_APP_ROOT_API}/subcategory/${this.selectedCategory}`)
+      fetch(
+        `${process.env.VUE_APP_ROOT_API}/subcategory/${this.selectedCategory}`
+      )
         .then(resp => resp.json())
         .then(data => {
           console.log(data);
@@ -127,7 +112,7 @@ export default {
       this.link = "";
       this.selectedCategory = "";
       this.selectedSubcategory = "";
-    }
+    },
   },
   mounted: function() {
     fetch(`${process.env.VUE_APP_ROOT_API}/category`)
@@ -166,6 +151,11 @@ label {
   border: #29b7bd;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .submit {
   margin: 2%;
   color: white;
@@ -189,12 +179,75 @@ label {
   top: 2px;
 }
 
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #ffffff;
+  box-shadow: 2px 2px 20px 1px;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header,
+.modal-footer {
+  padding: 15px;
+  display: flex;
+}
+
+.modal-header {
+  border-bottom: 1px solid #eeeeee;
+  color: #4aae9b;
+  justify-content: space-between;
+}
+
+.modal-footer {
+  border-top: 1px solid #eeeeee;
+  justify-content: flex-end;
+}
+
+.modal-body {
+  position: relative;
+  padding: 20px 10px;
+}
+
+.btn-close {
+  border: none;
+  font-size: 20px;
+  padding: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #4aae9b;
+  background: transparent;
+}
+
+.btn-green {
+  color: white;
+  background: #4aae9b;
+  border: 1px solid #4aae9b;
+  border-radius: 2px;
+}
+
 @media (max-width: 1024px) {
   .submit {
     background-color: white;
     color: black;
     border: 1px solid white;
     box-shadow: none;
+  }
+
+  a {
+    color: black;
   }
 
   .submit:hover {
