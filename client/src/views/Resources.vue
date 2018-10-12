@@ -13,14 +13,13 @@
               <div class="card-info">{{res.detailedDescription}}</div><!-- /.card-info -->
             </div><!-- /.title-content -->
             <div class="title-link">
-              <a class="goToLink" :href="res.link" target="_">Read More</a>
+              <a class="goToLink" :href="res.link" target="_blank">Read More</a>
             </div>
           </div><!-- /.blog-card -->
         </div>
       </div>
     </div>
   </div>
- 
 </template>
 
 <script>
@@ -62,11 +61,10 @@ $txt-color: #dce3e7;
 $txt-color2: white;
 
 .mainBody {
-  height: 84%;
+  // height: 84%;
   position: relative;
   text-align: center;
   color: white;
-  overflow: scroll;
 }
 
 .cards {

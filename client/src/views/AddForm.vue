@@ -33,7 +33,9 @@
               <label for="link" required>Link to Resources Website</label>
               <input type="text" class="form-control" name="link" placeholder="Include http:// or https://" v-model="link" required>
             </div>
-            <button class="btn submit" type="submit" value="submit" v-on:click.prevent="submitResource"><router-link to="/thankyou">Submit</router-link></button>
+            <span v-on:click.prevent="submitResource"><router-link to="/thankyou">
+              <button class="btn submit" type="submit" value="submit">Submit</button>
+            </router-link></span>
           </form>
         </div>
     </div>

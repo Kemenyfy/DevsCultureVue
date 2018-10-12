@@ -17,7 +17,9 @@
             <div class="card-description">{{sub.briefDescription}}</div>
             <div class="card-flap flap2">
               <div class="card-actions">
-                <a class="btn"><router-link :to="`./resources/${sub.id}`">Find Resources</router-link></a>
+                <div><router-link :to="`./resources/${sub.id}`">
+                  <button class="btn">Find Resources</button>
+                </router-link></div>
               </div>
             </div>
           </div>
@@ -119,9 +121,14 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-a {
+button {
   text-decoration: none;
   color: white;
+}
+
+button.btn {
+  color: white;
+  background: #0096a0;
 }
 
 a.btn {
@@ -134,6 +141,10 @@ a.btn {
   position: relative;
   text-decoration: none;
   transition: all 0.1s 0s ease-out;
+}
+
+a:hover {
+  opacity: .8;
 }
 
 .no-touch a.btn:hover {

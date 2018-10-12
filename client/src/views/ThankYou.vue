@@ -5,9 +5,10 @@
             <TopBar />
             <div class="mainBody">
                 <div class="box">
-                    <h4 class="heading">Our Mission</h4>
-                    <p class="content">DevsCulture is a catalyst for developers to feel, see, and claim their power.</p>
-                    <button class="button" type="button"><router-link to="/home">Take me Home</router-link></button>
+                    <h4 class="heading">Thank You!</h4>
+                    <p class="content">DevsCulture is built by developers, for developers.</p>
+                    <p class="content">The community appreciates your help.</p>
+                    <button class="button" type="button"><router-link to="/">Take me Home</router-link></button>
                 </div>
             </div>
         </div>
@@ -22,38 +23,50 @@ export default {
   components: {
     Nav,
     TopBar
-  },
+  }
 };
 </script>
 
 <style scoped>
+.mainBody {
+  text-align: center;
+}
 
+.heading {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+p,
+.heading {
+  color: white;
+}
+
+.box {
+  padding: 3em;
+}
+
+.button {
+  margin: 2%;
+  background-color: white;
+  text-align: center;
+  padding: 10px 10px;
+  font-weight: bold;
+  border-radius: 0.25rem;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
 
 @media (max-width: 1024px) {
-  .submit {
-    background-color: white;
-    color: black;
-    border: 1px solid white;
-    box-shadow: none;
-  }
-
-  .submit:hover {
-    opacity: 0.8;
-  }
-
-  .submit:active {
-    top: 0px;
-  }
 }
 
 @media (max-width: 768px) {
-  .form-row {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .form-control {
-    width: 100%;
-  }
 }
 </style>
