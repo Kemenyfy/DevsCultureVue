@@ -5,7 +5,7 @@
         <TopBar />
         <section>
             <div class="content">
-                <h2 class="heading">Contact Me</h2>
+                <h2 class="heading">Contact Us</h2>
                 <p class="lead contactExtra">Let us know if we are missing a Category/Subcategory. Also if we can serve you somehow.</p>
                 <form id="contact-form" method="post" action="https://formspree.io/gus.kemenyfy@gmail.com" class="contact-form">
                   <div class="controls">
