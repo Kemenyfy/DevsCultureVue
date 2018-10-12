@@ -27,7 +27,7 @@
             </div>
             <div class="form-group">
               <label for="detailedDescription" required>Resource Description</label>
-              <input type="text" class="form-control" name="detailedDescription" placeholder="..." maxlength="480" v-model="detailedDescription" required>
+              <textarea type="text" class="form-control" name="detailedDescription" placeholder="..." maxlength="480" v-model="detailedDescription" required></textarea>
             </div>
             <div class="form-group">
               <label for="link" required>Link to Resources Website</label>

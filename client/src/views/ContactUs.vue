@@ -56,30 +56,31 @@ export default {
 
 <style scoped>
 .form-control {
-    width: 100%;
+  width: 100%;
 }
 
 .row {
   display: flex;
   flex-direction: column;
- }
+}
 
 .content {
-    text-align: center;
-    color: white;
+  margin: 4%;
+  text-align: center;
+  color: white;
 }
 
 .name {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .heading {
-    margin-bottom: 2%;
+  margin-bottom: 2%;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 p {
