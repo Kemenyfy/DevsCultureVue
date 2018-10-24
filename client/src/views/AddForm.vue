@@ -33,7 +33,7 @@
               <label for="link" required>Link to Resources Website</label>
               <input type="text" class="form-control" name="link" placeholder="Include http:// or https://" v-model="link" required>
             </div>
-            <span v-on:click.prevent="submitResource"><router-link to="/thankyou">
+            <span v-on:click.prevent="submitResource" class="submitButton"><router-link to="/thankyou">
               <button class="btn submit" type="submit" value="submit">Submit</button>
             </router-link></span>
           </form>
@@ -148,6 +148,10 @@ label {
   width: 80%;
 }
 
+.submitButton {
+  margin-top: 1em;
+}
+
 .btn {
   background-color: #29b7bd;
   border: #29b7bd;
@@ -159,7 +163,7 @@ a {
 }
 
 .submit {
-  margin: 2%;
+  margin: 1em;
   color: white;
   text-align: center;
   padding: 10px 10px;
