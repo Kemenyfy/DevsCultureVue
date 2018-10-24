@@ -11,27 +11,27 @@
                   <div class="controls">
                     <div class="name">
                       <div>
-                        <div class="form-group">
+                        <div class="form-input">
                           <label for="name">Your First Name *</label>
                           <input type="text" name="name" placeholder="Enter Your First Name" required="required" class="form-control">
                         </div>
                       </div>
                       <div>
-                        <div class="form-group">
+                        <div class="form-input">
                           <label for="surname">Your Last Name *</label>
                           <input type="text" name="surname" placeholder="Enter Your Last Name" required="required" class="form-control">
                         </div>
                       </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-input">
                       <label for="surname">Your Email *</label>
                       <input type="email" name="email" placeholder="Enter Your Email" required="required" class="form-control">
                     </div>
-                    <div class="form-group">
+                    <div class="form-input">
                       <label for="surname">Your Message *</label>
                       <textarea rows="4" name="message" placeholder="Enter your message" required="required" class="form-control"></textarea>
                     </div>
-                    <div class="text-center">
+                    <div class="submitContact">
                       <input type="submit" name="name" value="Send message" class="btn btn-primary btn-block">
                     </div>
                   </div>
@@ -70,6 +70,11 @@ export default {
   color: white;
 }
 
+.form-input {
+  margin-top: 1em;
+  text-align: left;
+}
+
 .name {
   flex-direction: row;
 }
@@ -86,6 +91,10 @@ export default {
 p {
   font-size: 1em;
   margin: 0 4% 0 4%;
+}
+
+.submitContact {
+  margin-top: 1em;
 }
 
 @media (max-width: 768px) {
