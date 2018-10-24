@@ -17,19 +17,19 @@
                   <option v-for="sub in subcategoriesData" :key="sub.id" v-on:Click="setSubcategoryId(sub)" :value="sub.id">{{sub.name}}</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-input">
               <label for="resourceName">Resource Name</label>
               <input type="text" class="form-control" name="resourceName" placeholder="..." maxlength="24" v-model="resourceName" required>
             </div>
-            <div class="form-group">
+            <div class="form-input">
               <label for="briefDescription">Resource Brief Description</label>
               <input type="text" class="form-control" name="briefDescription" placeholder="..." maxlength="80" v-model="briefDescription">
             </div>
-            <div class="form-group">
+            <div class="form-input">
               <label for="detailedDescription" required>Resource Description</label>
               <textarea type="text" class="form-control" name="detailedDescription" placeholder="..." maxlength="480" v-model="detailedDescription" required></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-input">
               <label for="link" required>Link to Resources Website</label>
               <input type="text" class="form-control" name="link" placeholder="Include http:// or https://" v-model="link" required>
             </div>

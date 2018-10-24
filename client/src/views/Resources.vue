@@ -65,6 +65,7 @@ $txt-color2: white;
   position: relative;
   text-align: center;
   color: white;
+  overflow: auto;
 }
 
 .cards {
@@ -145,7 +146,7 @@ hr {
   line-height: 20px;
   opacity: 0;
   transition: bottom 0.5s, opacity 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
-  overflow: scroll;
+  overflow: auto;
 }
 
 .card-info:hover {
