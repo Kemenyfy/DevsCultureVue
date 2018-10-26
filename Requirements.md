@@ -47,10 +47,10 @@ We will write here our step by step process to build the website.
     - [ ] Extra Pages
         - [X] SubCategory Page
         - [X] Resources Page
-        - [ ] Add a Resource Page
-        - [ ] About Page
+        - [X] Add a Resource Page
+        - [X] About Page
         - [ ] Blogs Page (This might get deleted)
-        - [ ] Contact Us Page
+        - [X] Contact Us Page
         - [ ] Sponsors Page (This might get deleted)
 
 
