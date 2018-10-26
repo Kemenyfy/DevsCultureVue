@@ -23,7 +23,7 @@ We will write here our step by step process to build the website.
         - [X] SideBar Animation
         - [X] Responsiveness
         - [X] Add Add Form Link
-        - [ ] Link SideBar Items
+        - [X] Link SideBar Items
 
 
     - [X] Home Page Body (Category Page)
@@ -45,8 +45,8 @@ We will write here our step by step process to build the website.
 
 
     - [ ] Extra Pages
-        - [ ] SubCategory Page
-        - [ ] Resources Page
+        - [X] SubCategory Page
+        - [X] Resources Page
         - [ ] Add a Resource Page
         - [ ] About Page
         - [ ] Blogs Page (This might get deleted)
