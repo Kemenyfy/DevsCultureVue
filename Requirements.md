@@ -32,7 +32,6 @@ We will write here our step by step process to build the website.
         - [X] Basic Images Placeholder
         - [X] Flex-Wrap Images
         - [X] Make Home Page Responsive
-        - [ ] Add Splitting SCSS to Basic Images
         - [X] Link Basic Images
 
 
